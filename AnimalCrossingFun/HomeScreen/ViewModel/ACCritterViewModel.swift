@@ -18,9 +18,9 @@ enum ACCritterType: CaseIterable {
         case .fish:
             return "Fish"
         case .seaCreature:
-            return "sea"
+            return "Sea Creatures"
         case .bugs:
-            return "bugs"
+            return "Bugs"
         case .fossils:
             return "Fossils"
         }
@@ -30,9 +30,9 @@ enum ACCritterType: CaseIterable {
         case .fish:
             return "fish"
         case .seaCreature:
-            return "Sea Creatures"
+            return "sea"
         case .bugs:
-            return "Bugs"
+            return "bugs"
         case .fossils:
             return "fossils"
         }

@@ -11,8 +11,9 @@
 		4A29614B28358E2800D53965 /* FlexLayoutYoga in Frameworks */ = {isa = PBXBuildFile; productRef = 4A29614A28358E2800D53965 /* FlexLayoutYoga */; };
 		4A29614D28358E2800D53965 /* FlexLayoutYogaKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4A29614C28358E2800D53965 /* FlexLayoutYogaKit */; };
 		4A29615028358E5B00D53965 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 4A29614F28358E5B00D53965 /* PinLayout */; };
-		4A29615228358F6000D53965 /* ACCirtterListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A29615128358F6000D53965 /* ACCirtterListDataSource.swift */; };
+		4A29615228358F6000D53965 /* ACCritterListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A29615128358F6000D53965 /* ACCritterListDataSource.swift */; };
 		4A2961542835904400D53965 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2961532835904400D53965 /* UITableViewCell+Extension.swift */; };
+		4A2961562835958C00D53965 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2961552835958C00D53965 /* UINavigationController+Extension.swift */; };
 		4A65FBEA28358C3B006C7B19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65FBE928358C3B006C7B19 /* AppDelegate.swift */; };
 		4A65FBEC28358C3B006C7B19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65FBEB28358C3B006C7B19 /* SceneDelegate.swift */; };
 		4A65FBF128358C3B006C7B19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A65FBEF28358C3B006C7B19 /* Main.storyboard */; };
@@ -61,8 +62,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4A29615128358F6000D53965 /* ACCirtterListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACCirtterListDataSource.swift; sourceTree = "<group>"; };
+		4A29615128358F6000D53965 /* ACCritterListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACCritterListDataSource.swift; sourceTree = "<group>"; };
 		4A2961532835904400D53965 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		4A2961552835958C00D53965 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		4A65FBE628358C3B006C7B19 /* AnimalCrossingFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalCrossingFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A65FBE928358C3B006C7B19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A65FBEB28358C3B006C7B19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,11 +182,11 @@
 		4A65FC1F28358CF3006C7B19 /* CritterListScreen */ = {
 			isa = PBXGroup;
 			children = (
-				4A65FC2028358CF3006C7B19 /* ViewModel */,
+				4A65FC2528358CF3006C7B19 /* Controller */,
 				4A65FC2228358CF3006C7B19 /* DataSource */,
 				4A65FC2328358CF3006C7B19 /* Network */,
-				4A65FC2528358CF3006C7B19 /* Controller */,
 				4A65FC2728358CF3006C7B19 /* View */,
+				4A65FC2028358CF3006C7B19 /* ViewModel */,
 			);
 			path = CritterListScreen;
 			sourceTree = "<group>";
@@ -200,7 +202,7 @@
 		4A65FC2228358CF3006C7B19 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				4A29615128358F6000D53965 /* ACCirtterListDataSource.swift */,
+				4A29615128358F6000D53965 /* ACCritterListDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -266,6 +268,7 @@
 			children = (
 				4A65FC3128358CF3006C7B19 /* UIView+Extension.swift */,
 				4A2961532835904400D53965 /* UITableViewCell+Extension.swift */,
+				4A2961552835958C00D53965 /* UINavigationController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -292,11 +295,11 @@
 		4A65FC3928358CF4006C7B19 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
-				4A65FC3A28358CF4006C7B19 /* ViewModel */,
-				4A65FC3C28358CF4006C7B19 /* DataSource */,
 				4A65FC3E28358CF4006C7B19 /* Cells */,
 				4A65FC4128358CF4006C7B19 /* Controller */,
+				4A65FC3C28358CF4006C7B19 /* DataSource */,
 				4A65FC4328358CF4006C7B19 /* View */,
+				4A65FC3A28358CF4006C7B19 /* ViewModel */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -487,9 +490,10 @@
 				4A65FC4528358CF4006C7B19 /* ACCritterListViewModel.swift in Sources */,
 				4A65FC4828358CF4006C7B19 /* ACCritterListView.swift in Sources */,
 				4A65FC5728358CF4006C7B19 /* ACHomeViewController.swift in Sources */,
-				4A29615228358F6000D53965 /* ACCirtterListDataSource.swift in Sources */,
+				4A29615228358F6000D53965 /* ACCritterListDataSource.swift in Sources */,
 				4A65FC5428358CF4006C7B19 /* ACHomeTableViewDataSource.swift in Sources */,
 				4A65FC4628358CF4006C7B19 /* ACCritterEndPoint.swift in Sources */,
+				4A2961562835958C00D53965 /* UINavigationController+Extension.swift in Sources */,
 				4A65FC5028358CF4006C7B19 /* Availability.swift in Sources */,
 				4A65FC4928358CF4006C7B19 /* Colour.swift in Sources */,
 				4A65FC5528358CF4006C7B19 /* ACCritterTableViewCell.swift in Sources */,

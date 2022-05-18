@@ -17,7 +17,7 @@ protocol Endpoint {
 
 extension Endpoint {
     var baseURL: String {
-        return "https://acnhapi.com/v1/"
+        return "https://acnhapi.com/v1a/"
     }
 }
 

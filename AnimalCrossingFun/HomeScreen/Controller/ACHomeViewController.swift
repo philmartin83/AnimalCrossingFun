@@ -25,7 +25,7 @@ class ACHomeViewController: UIViewController {
         view.backgroundColor = .systemBackground
         view = ACHomeView()
         mainView.delegate = self
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.styleNavigationBar(colour: .clear, tintColour: .clear)
     }
 
 }

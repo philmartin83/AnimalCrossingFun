@@ -35,5 +35,6 @@ class ACCritterListViewController: UIViewController {
     private func setup() {
         view.backgroundColor = .systemBackground
         view = ACCritterListView(withCritter: critterType)
+        self.navigationController?.styleNavigationBar(colour: .clear, tintColour: Colour.AnimalCrossingPrimary100 ?? .blue)
     }
 }

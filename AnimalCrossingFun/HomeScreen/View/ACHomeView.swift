@@ -44,6 +44,7 @@ class ACHomeView: ACBackgroundView {
         dataSource.viewDelegate = self
         dataSource.setup()
         tableView.dataSource = dataSource
+        tableView.delegate = dataSource
         tableView.separatorColor = .clear
         addSubview(rootFlexContainer)
     }
