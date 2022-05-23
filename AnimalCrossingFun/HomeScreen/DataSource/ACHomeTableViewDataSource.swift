@@ -18,7 +18,7 @@ extension ACCritterTableViewDelegate {
 }
 
 
-class ACHomeTableViewDataSource: NSObject, UITableViewDataSource {
+class ACHomeTableViewDataSource: NSObject {
     
     enum HomeSections: CaseIterable {
         case profile
@@ -34,8 +34,10 @@ class ACHomeTableViewDataSource: NSObject, UITableViewDataSource {
         viewModel.output = self
         viewModel.getAllCritters()
     }
-    
-    // MARK: - TableView Data Source
+}
+
+// MARK: - TableView Data Source
+extension ACHomeTableViewDataSource: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return HomeSections.allCases.count
     }
@@ -66,6 +68,7 @@ class ACHomeTableViewDataSource: NSObject, UITableViewDataSource {
     }
 }
 
+//MARK: - UITableView Delegate
 extension ACHomeTableViewDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
@@ -83,6 +86,7 @@ extension ACHomeTableViewDataSource: UITableViewDelegate {
     }
 }
 
+//MARK: - ACCritter View Output
 extension ACHomeTableViewDataSource: ACCritterViewOutput {
     func crittersCollected(critters: [CritterModel]) {
         self.critters = critters

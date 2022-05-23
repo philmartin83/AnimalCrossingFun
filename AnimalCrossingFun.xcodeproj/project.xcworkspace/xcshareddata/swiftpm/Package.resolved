@@ -17,6 +17,15 @@
         "branch" : "master",
         "revision" : "f054f61b6c641a2298b2bedb05269f78cffb1b1c"
       }
+    },
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "2e63d0061da449ad0ed130768d05dceb1496de44",
+        "version" : "5.12.5"
+      }
     }
   ],
   "version" : 2

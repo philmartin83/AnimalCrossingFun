@@ -14,6 +14,7 @@
 		4A29615228358F6000D53965 /* ACCritterListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A29615128358F6000D53965 /* ACCritterListDataSource.swift */; };
 		4A2961542835904400D53965 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2961532835904400D53965 /* UITableViewCell+Extension.swift */; };
 		4A2961562835958C00D53965 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2961552835958C00D53965 /* UINavigationController+Extension.swift */; };
+		4A29615928359E8000D53965 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A29615828359E8000D53965 /* Dispatch.swift */; };
 		4A65FBEA28358C3B006C7B19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65FBE928358C3B006C7B19 /* AppDelegate.swift */; };
 		4A65FBEC28358C3B006C7B19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65FBEB28358C3B006C7B19 /* SceneDelegate.swift */; };
 		4A65FBF128358C3B006C7B19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A65FBEF28358C3B006C7B19 /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 		4A65FC5628358CF4006C7B19 /* ACProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65FC4028358CF4006C7B19 /* ACProfileTableViewCell.swift */; };
 		4A65FC5728358CF4006C7B19 /* ACHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65FC4228358CF4006C7B19 /* ACHomeViewController.swift */; };
 		4A65FC5828358CF4006C7B19 /* ACHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65FC4428358CF4006C7B19 /* ACHomeView.swift */; };
+		4AA7F79D283C157100B42FFC /* ACCritterListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7F79C283C157100B42FFC /* ACCritterListTableViewCell.swift */; };
+		4AA7F7A0283C16BE00B42FFC /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4AA7F79F283C16BE00B42FFC /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,7 @@
 		4A29615128358F6000D53965 /* ACCritterListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACCritterListDataSource.swift; sourceTree = "<group>"; };
 		4A2961532835904400D53965 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		4A2961552835958C00D53965 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		4A29615828359E8000D53965 /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		4A65FBE628358C3B006C7B19 /* AnimalCrossingFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalCrossingFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A65FBE928358C3B006C7B19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A65FBEB28358C3B006C7B19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		4A65FC4028358CF4006C7B19 /* ACProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACProfileTableViewCell.swift; sourceTree = "<group>"; };
 		4A65FC4228358CF4006C7B19 /* ACHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACHomeViewController.swift; sourceTree = "<group>"; };
 		4A65FC4428358CF4006C7B19 /* ACHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACHomeView.swift; sourceTree = "<group>"; };
+		4AA7F79C283C157100B42FFC /* ACCritterListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACCritterListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +113,7 @@
 				4A29614B28358E2800D53965 /* FlexLayoutYoga in Frameworks */,
 				4A29615028358E5B00D53965 /* PinLayout in Frameworks */,
 				4A29614D28358E2800D53965 /* FlexLayoutYogaKit in Frameworks */,
+				4AA7F7A0283C16BE00B42FFC /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +188,7 @@
 		4A65FC1F28358CF3006C7B19 /* CritterListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				4AA7F79B283C154400B42FFC /* Cell */,
 				4A65FC2528358CF3006C7B19 /* Controller */,
 				4A65FC2228358CF3006C7B19 /* DataSource */,
 				4A65FC2328358CF3006C7B19 /* Network */,
@@ -234,6 +241,7 @@
 		4A65FC2928358CF3006C7B19 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				4A29615828359E8000D53965 /* Dispatch.swift */,
 				4A65FBE928358C3B006C7B19 /* AppDelegate.swift */,
 				4A65FBEB28358C3B006C7B19 /* SceneDelegate.swift */,
 				4A65FC2A28358CF3006C7B19 /* Colour.swift */,
@@ -266,9 +274,9 @@
 		4A65FC3028358CF3006C7B19 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4A65FC3128358CF3006C7B19 /* UIView+Extension.swift */,
-				4A2961532835904400D53965 /* UITableViewCell+Extension.swift */,
 				4A2961552835958C00D53965 /* UINavigationController+Extension.swift */,
+				4A2961532835904400D53965 /* UITableViewCell+Extension.swift */,
+				4A65FC3128358CF3006C7B19 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -345,6 +353,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4AA7F79B283C154400B42FFC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4AA7F79C283C157100B42FFC /* ACCritterListTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -366,6 +382,7 @@
 				4A29614A28358E2800D53965 /* FlexLayoutYoga */,
 				4A29614C28358E2800D53965 /* FlexLayoutYogaKit */,
 				4A29614F28358E5B00D53965 /* PinLayout */,
+				4AA7F79F283C16BE00B42FFC /* SDWebImage */,
 			);
 			productName = AnimalCrossingFun;
 			productReference = 4A65FBE628358C3B006C7B19 /* AnimalCrossingFun.app */;
@@ -442,6 +459,7 @@
 			packageReferences = (
 				4A29614728358E2800D53965 /* XCRemoteSwiftPackageReference "FlexLayout" */,
 				4A29614E28358E5B00D53965 /* XCRemoteSwiftPackageReference "PinLayout" */,
+				4AA7F79E283C16BE00B42FFC /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 4A65FBE728358C3B006C7B19 /* Products */;
 			projectDirPath = "";
@@ -493,6 +511,7 @@
 				4A29615228358F6000D53965 /* ACCritterListDataSource.swift in Sources */,
 				4A65FC5428358CF4006C7B19 /* ACHomeTableViewDataSource.swift in Sources */,
 				4A65FC4628358CF4006C7B19 /* ACCritterEndPoint.swift in Sources */,
+				4AA7F79D283C157100B42FFC /* ACCritterListTableViewCell.swift in Sources */,
 				4A2961562835958C00D53965 /* UINavigationController+Extension.swift in Sources */,
 				4A65FC5028358CF4006C7B19 /* Availability.swift in Sources */,
 				4A65FC4928358CF4006C7B19 /* Colour.swift in Sources */,
@@ -511,6 +530,7 @@
 				4A65FC4E28358CF4006C7B19 /* ACWaveView.swift in Sources */,
 				4A65FC5828358CF4006C7B19 /* ACHomeView.swift in Sources */,
 				4A65FBEC28358C3B006C7B19 /* SceneDelegate.swift in Sources */,
+				4A29615928359E8000D53965 /* Dispatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,6 +896,14 @@
 				kind = branch;
 			};
 		};
+		4AA7F79E283C16BE00B42FFC /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -898,6 +926,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4A29614E28358E5B00D53965 /* XCRemoteSwiftPackageReference "PinLayout" */;
 			productName = PinLayout;
+		};
+		4AA7F79F283C16BE00B42FFC /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4AA7F79E283C16BE00B42FFC /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

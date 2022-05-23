@@ -18,7 +18,7 @@ class ACHomeView: ACBackgroundView {
     // MARK: - Properties
     private let rootFlexContainer = UIView()
     private let dataSource = ACHomeTableViewDataSource()
-    private let tableView = UITableView(frame: .zero, style: .grouped)
+    private let tableView = UITableView(frame: .zero, style: .plain)
     
     weak var delegate: ACHomeViewDelegate?
     
@@ -29,6 +29,7 @@ class ACHomeView: ACBackgroundView {
         rootFlexContainer.flex.layout()
     }
     
+    // MARK: - Initaliser
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -40,9 +41,11 @@ class ACHomeView: ACBackgroundView {
         super.init(coder: coder)
     }
     
+    // MARK: - Private Helpers
     private func setup() {
         dataSource.viewDelegate = self
         dataSource.setup()
+        tableView.sectionHeaderTopPadding = 0
         tableView.dataSource = dataSource
         tableView.delegate = dataSource
         tableView.separatorColor = .clear
@@ -62,6 +65,7 @@ class ACHomeView: ACBackgroundView {
     
 }
 
+// MARK: - ACCritter TableView Delegate
 extension ACHomeView: ACCritterTableViewDelegate {
     func presentModal(critter: ACCritterType) {
         delegate?.presentDetailList(critterType: critter)

@@ -10,10 +10,12 @@ import UIKit
 extension UINavigationController {
     
     func styleNavigationBar(colour: UIColor, tintColour: UIColor) {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = colour
-        self.navigationBar.tintColor = tintColour
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.backgroundColor = colour
+        navBarAppearance.shadowColor = .clear
+        navigationBar.tintColor = tintColour
+        navigationBar.standardAppearance = navBarAppearance
+        navigationBar.scrollEdgeAppearance = navBarAppearance
     }
 }

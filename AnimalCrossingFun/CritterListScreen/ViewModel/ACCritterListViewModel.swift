@@ -8,12 +8,12 @@
 import Foundation
 
 protocol ACCritterListViewModelOutput: AnyObject {
-    func contentRecieved(model: CritterResponseModel)
+    func contentRecieved(model: [CritterResponseModel])
     func requestFailed(error: String)
 }
 
 protocol ACCritterServiceable {
-    func getAllCritters(critterType: ACCritterType) async -> Result<CritterResponseModel, RequestError>
+    func getAllCritters(critterType: ACCritterType) async -> Result<[CritterResponseModel], RequestError>
 }
 
 class ACCritterListViewModel: HTTPClient, ACCritterServiceable {
@@ -35,8 +35,8 @@ class ACCritterListViewModel: HTTPClient, ACCritterServiceable {
     }
     
     // MARK: Private Helpers
-    internal func getAllCritters(critterType: ACCritterType) async -> Result<CritterResponseModel, RequestError> {
-        return await sendRequest(endpoint: ACCritterEndPoint.critterType(type: critterType.critterURL), responseModel: CritterResponseModel.self)
+    internal func getAllCritters(critterType: ACCritterType) async -> Result<[CritterResponseModel], RequestError> {
+        return await sendRequest(endpoint: ACCritterEndPoint.critterType(type: critterType.critterURL), responseModel: [CritterResponseModel].self)
     }
     
 }

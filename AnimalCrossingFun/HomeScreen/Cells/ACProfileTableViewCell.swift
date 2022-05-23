@@ -70,7 +70,7 @@ class ACProfileTableViewCell: UITableViewCell {
         profilePicture.backgroundColor = .blue
         nameLabel.numberOfLines = 0
         nameLabel.text = "Ronnie Martin"
-        nameLabel.font = UIFont.systemFont(ofSize: 16)
+        nameLabel.font = UIFont.boldSystemFont(ofSize: 24)
     }
     
     private func addStyling() {

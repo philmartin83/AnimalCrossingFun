@@ -12,7 +12,7 @@ struct CritterResponseModel: Codable {
     let fileName: String
     let name: Name
     let availability: Availability
-    let shadow: String
+    let shadow: String?
     let price, priceCj: Float?
     let catchPhrase, museumPhrase: String
     let imageURI, iconURI: String?
