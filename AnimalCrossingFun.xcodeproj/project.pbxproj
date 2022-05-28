@@ -43,6 +43,10 @@
 		4A65FC5628358CF4006C7B19 /* ACProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65FC4028358CF4006C7B19 /* ACProfileTableViewCell.swift */; };
 		4A65FC5728358CF4006C7B19 /* ACHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65FC4228358CF4006C7B19 /* ACHomeViewController.swift */; };
 		4A65FC5828358CF4006C7B19 /* ACHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65FC4428358CF4006C7B19 /* ACHomeView.swift */; };
+		4A77B323284280A100D00439 /* ACCritterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77B322284280A100D00439 /* ACCritterDetailViewController.swift */; };
+		4A77B3252842812D00D00439 /* ACCritterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77B3242842812D00D00439 /* ACCritterDetailView.swift */; };
+		4A77B3272842846100D00439 /* ACCritterById.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77B3262842846100D00439 /* ACCritterById.swift */; };
+		4A77B32A2842880C00D00439 /* ACCritterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77B3292842880C00D00439 /* ACCritterDetailViewModel.swift */; };
 		4AA7F79D283C157100B42FFC /* ACCritterListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7F79C283C157100B42FFC /* ACCritterListTableViewCell.swift */; };
 		4AA7F7A0283C16BE00B42FFC /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4AA7F79F283C16BE00B42FFC /* SDWebImage */; };
 /* End PBXBuildFile section */
@@ -101,6 +105,10 @@
 		4A65FC4028358CF4006C7B19 /* ACProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACProfileTableViewCell.swift; sourceTree = "<group>"; };
 		4A65FC4228358CF4006C7B19 /* ACHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACHomeViewController.swift; sourceTree = "<group>"; };
 		4A65FC4428358CF4006C7B19 /* ACHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACHomeView.swift; sourceTree = "<group>"; };
+		4A77B322284280A100D00439 /* ACCritterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACCritterDetailViewController.swift; sourceTree = "<group>"; };
+		4A77B3242842812D00D00439 /* ACCritterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACCritterDetailView.swift; sourceTree = "<group>"; };
+		4A77B3262842846100D00439 /* ACCritterById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACCritterById.swift; sourceTree = "<group>"; };
+		4A77B3292842880C00D00439 /* ACCritterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACCritterDetailViewModel.swift; sourceTree = "<group>"; };
 		4AA7F79C283C157100B42FFC /* ACCritterListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACCritterListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +165,7 @@
 		4A65FBE828358C3B006C7B19 /* AnimalCrossingFun */ = {
 			isa = PBXGroup;
 			children = (
+				4A77B31E2842803200D00439 /* CritterDetailScreen */,
 				4A65FC2928358CF3006C7B19 /* Core */,
 				4A65FC1F28358CF3006C7B19 /* CritterListScreen */,
 				4A65FC3928358CF4006C7B19 /* HomeScreen */,
@@ -353,6 +362,49 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4A77B31E2842803200D00439 /* CritterDetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4A77B31F2842804200D00439 /* Controller */,
+				4A77B3212842805E00D00439 /* Network */,
+				4A77B3202842804B00D00439 /* View */,
+				4A77B328284287A200D00439 /* ViewModel */,
+			);
+			path = CritterDetailScreen;
+			sourceTree = "<group>";
+		};
+		4A77B31F2842804200D00439 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A77B322284280A100D00439 /* ACCritterDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A77B3202842804B00D00439 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A77B3242842812D00D00439 /* ACCritterDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A77B3212842805E00D00439 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4A77B3262842846100D00439 /* ACCritterById.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4A77B328284287A200D00439 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4A77B3292842880C00D00439 /* ACCritterDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		4AA7F79B283C154400B42FFC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -504,9 +556,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A77B32A2842880C00D00439 /* ACCritterDetailViewModel.swift in Sources */,
 				4A65FC5328358CF4006C7B19 /* ACCritterViewModel.swift in Sources */,
 				4A65FC4528358CF4006C7B19 /* ACCritterListViewModel.swift in Sources */,
 				4A65FC4828358CF4006C7B19 /* ACCritterListView.swift in Sources */,
+				4A77B3252842812D00D00439 /* ACCritterDetailView.swift in Sources */,
 				4A65FC5728358CF4006C7B19 /* ACHomeViewController.swift in Sources */,
 				4A29615228358F6000D53965 /* ACCritterListDataSource.swift in Sources */,
 				4A65FC5428358CF4006C7B19 /* ACHomeTableViewDataSource.swift in Sources */,
@@ -517,6 +571,7 @@
 				4A65FC4928358CF4006C7B19 /* Colour.swift in Sources */,
 				4A65FC5528358CF4006C7B19 /* ACCritterTableViewCell.swift in Sources */,
 				4A65FC5128358CF4006C7B19 /* Name.swift in Sources */,
+				4A77B323284280A100D00439 /* ACCritterDetailViewController.swift in Sources */,
 				4A65FC4A28358CF4006C7B19 /* HTTPClient.swift in Sources */,
 				4A65FC5628358CF4006C7B19 /* ACProfileTableViewCell.swift in Sources */,
 				4A65FC4D28358CF4006C7B19 /* UIView+Extension.swift in Sources */,
@@ -527,6 +582,7 @@
 				4A65FC4728358CF4006C7B19 /* ACCritterListViewController.swift in Sources */,
 				4A2961542835904400D53965 /* UITableViewCell+Extension.swift in Sources */,
 				4A65FC4C28358CF4006C7B19 /* Endpoint.swift in Sources */,
+				4A77B3272842846100D00439 /* ACCritterById.swift in Sources */,
 				4A65FC4E28358CF4006C7B19 /* ACWaveView.swift in Sources */,
 				4A65FC5828358CF4006C7B19 /* ACHomeView.swift in Sources */,
 				4A65FBEC28358C3B006C7B19 /* SceneDelegate.swift in Sources */,

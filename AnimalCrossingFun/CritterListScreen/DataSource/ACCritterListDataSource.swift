@@ -10,6 +10,7 @@ import UIKit
 
 protocol ACCritterListDataSourceDelegate: AnyObject {
     func adjustNavigationBar(addColour: Bool)
+    func critterSelected(id: Int)
 }
 
 class ACCritterListDataSource: NSObject {
@@ -47,6 +48,11 @@ extension ACCritterListDataSource: UITableViewDataSource {
 extension ACCritterListDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return .zero
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = critterResponse?[indexPath.row]
+        viewDelegate?.critterSelected(id: data?.id ?? 0)
     }
 }
 

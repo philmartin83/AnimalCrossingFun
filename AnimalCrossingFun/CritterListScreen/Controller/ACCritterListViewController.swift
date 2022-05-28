@@ -70,6 +70,11 @@ extension ACCritterListViewController: ACCritterListViewDelegate {
             self.navigationController?.navigationBar.layoutIfNeeded()
         }
     }
+    
+    func critterSelected(id: Int, type: String) {
+        let critterDetailViewController = ACCritterDetailViewController(withCritterId: id, type: type)
+        present(critterDetailViewController, animated: true)
+    }
 }
 
 class NavigationController : UINavigationController {

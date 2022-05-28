@@ -34,7 +34,7 @@ class ACCritterListViewModel: HTTPClient, ACCritterServiceable {
         }
     }
     
-    // MARK: Private Helpers
+    // MARK: Internal Helpers
     internal func getAllCritters(critterType: ACCritterType) async -> Result<[CritterResponseModel], RequestError> {
         return await sendRequest(endpoint: ACCritterEndPoint.critterType(type: critterType.critterURL), responseModel: [CritterResponseModel].self)
     }

@@ -10,6 +10,7 @@ import FlexLayout
 
 protocol ACCritterListViewDelegate: AnyObject {
     func adjustNavigationBar(addColour: Bool)
+    func critterSelected(id: Int, type: String)
 }
 
 class ACCritterListView: ACBackgroundView {
@@ -19,6 +20,7 @@ class ACCritterListView: ACBackgroundView {
     private let dataSource = ACCritterListDataSource()
     private let tableView = UITableView(frame: .zero, style: .plain)
     private let viewModel = ACCritterListViewModel()
+    private var type: ACCritterType?
     
     // MARK: - Public Properties
     weak var delegate: ACCritterListViewDelegate?
@@ -26,6 +28,7 @@ class ACCritterListView: ACBackgroundView {
     // MARK: - Initaliser
     init(withCritter critter: ACCritterType?) {
         super.init(frame: .zero)
+        self.type = critter
         registerCells()
         setup(critterType: critter!)
         addChildViews()
@@ -87,5 +90,9 @@ extension ACCritterListView: ACCritterListViewModelOutput {
 extension ACCritterListView: ACCritterListDataSourceDelegate {
     func adjustNavigationBar(addColour: Bool) {
         delegate?.adjustNavigationBar(addColour: addColour)
+    }
+    
+    func critterSelected(id: Int) {
+        delegate?.critterSelected(id: id, type: type!.critterURL)
     }
 }

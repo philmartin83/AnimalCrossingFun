@@ -1,4 +1,13 @@
 //
+//  ACCritterById.swift
+//  AnimalCrossingFun
+//
+//  Created by Philip Martin on 28/05/2022.
+//
+
+import Foundation
+
+//
 //  ACCritterEndPoint.swift
 //  AnimalCrossingFun
 //
@@ -7,36 +16,36 @@
 
 import Foundation
 
-enum ACCritterEndPoint {
-    case critterType(type: String)
+enum ACCritterByIdEndPoint {
+    case critterById(type: String, id: Int)
 }
 
-extension ACCritterEndPoint: Endpoint {
+extension ACCritterByIdEndPoint: Endpoint {
     
     var path: String {
         switch self {
-        case .critterType(let type):
-            return "\(type)"
+        case.critterById(let type,  let id):
+            return "\(type)/\(id)"
         }
     }
 
     var method: RequestMethod {
         switch self {
-        case .critterType:
+        case .critterById:
             return .get
         }
     }
 
     var header: [String: String]? {
         switch self {
-        case .critterType:
+        case .critterById:
             return nil
         }
     }
     
     var body: [String: String]? {
         switch self {
-        case .critterType:
+        case .critterById:
             return nil
         }
     }
