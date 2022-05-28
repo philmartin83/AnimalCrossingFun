@@ -45,6 +45,11 @@ class ACProfileTableViewCell: UITableViewCell {
         return contentView.frame.size
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        updateCardColour()
+    }
+    
     // MARK: - Private helpers
     private func layout() {
         contentView.flex.layout(mode: .adjustHeight)
@@ -64,13 +69,17 @@ class ACProfileTableViewCell: UITableViewCell {
     }
     
     private func setup() {
-        cardView.backgroundColor = .systemBackground
         backgroundColor = .clear
+        updateCardColour()
         profilePicture.layer.cornerRadius = 100/2
         profilePicture.backgroundColor = .blue
         nameLabel.numberOfLines = 0
         nameLabel.text = "Ronnie Martin"
         nameLabel.font = UIFont.boldSystemFont(ofSize: 24)
+    }
+    
+    private func updateCardColour() {
+        cardView.backgroundColor = .systemBackground
     }
     
     private func addStyling() {

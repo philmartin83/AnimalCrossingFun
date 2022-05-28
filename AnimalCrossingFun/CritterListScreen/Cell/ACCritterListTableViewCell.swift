@@ -37,6 +37,11 @@ class ACCritterListTableViewCell: UITableViewCell {
         addStyling()
         layout()
     }
+
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        updateCardColour()
+    }
     
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         // 1) Set the contentView's width to the specified size parameter
@@ -56,8 +61,8 @@ class ACCritterListTableViewCell: UITableViewCell {
     
     private func setup() {
         backgroundColor = .clear
+        updateCardColour()
         critterIconImage.sd_imageIndicator = SDWebImageActivityIndicator.gray
-        cardView.backgroundColor = .systemBackground
         critterLabel.numberOfLines = 0
         critterLabel.font = UIFont.boldSystemFont(ofSize: 16)
         critterIconImage.contentMode = .scaleAspectFit
@@ -65,6 +70,10 @@ class ACCritterListTableViewCell: UITableViewCell {
         critterIconImage.layer.borderWidth = 2.0
         critterIconImage.backgroundColor = Colour.AnimalCrossingPrimary100
         critterIconImage.layer.cornerRadius = imageSize/2
+    }
+    
+    private func updateCardColour() {
+        cardView.backgroundColor = .systemBackground
     }
     
     private func addChildViews() {

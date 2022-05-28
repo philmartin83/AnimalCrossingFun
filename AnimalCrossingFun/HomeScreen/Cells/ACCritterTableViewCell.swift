@@ -46,6 +46,11 @@ class ACCritterTableViewCell: UITableViewCell {
         return contentView.frame.size
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        updateCardColour()
+    }
+    
     // MARK: - Private helpers
     private func layout() {
         contentView.flex.layout(mode: .adjustHeight)
@@ -53,9 +58,13 @@ class ACCritterTableViewCell: UITableViewCell {
 
     private func setup() {
         backgroundColor = .clear
-        cardView.backgroundColor = .systemBackground
+        updateCardColour()
         critterLabel.numberOfLines = 0
         critterLabel.font = UIFont.boldSystemFont(ofSize: 16)
+    }
+    
+    private func updateCardColour() {
+        cardView.backgroundColor = .systemBackground
     }
     
     private func addChildViews() {

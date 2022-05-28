@@ -39,6 +39,9 @@ class ACCritterListViewController: UIViewController {
     
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
+        if self.traitCollection.userInterfaceStyle == .dark {
+            return .lightContent
+        }
         return isLightColour ? .lightContent : .darkContent
     }
     
